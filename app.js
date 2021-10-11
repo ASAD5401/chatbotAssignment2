@@ -2,14 +2,23 @@ function convertor() {
     var rupees = Number(document.getElementById('rupees').value)
     var dollar = Number(document.getElementById('dollar').value)
 
+var dol=document.getElementById('dollar')
+var rup=document.getElementById('rupees')
 
     // var dollar = Number(document.getElementById('dollar').value)
     if (rupees) {
-    dollar=10
+    rupees=rupees/170
+    dol.value=rupees
+    }
+    else if(dollar){
+        dollar=dollar*170
+        rup.value=dollar
+
     }
     console.log(rupees, dollar)
 
 }
+
 
 function Grade() {
     var grade;
@@ -57,6 +66,5 @@ result=" You need to carry nothing"
         result="You don't need to go out"
     }
     final.innerHTML=result
-
 
 }
